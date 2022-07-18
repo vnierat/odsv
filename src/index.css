@@ -1,0 +1,70 @@
+html,
+body,
+ul,
+ol,
+li,
+p,
+form,
+fieldset,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+header,
+footer,
+section,
+aside {
+  display: block;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+html {
+  -webkit-font-smoothing: antialiased;
+}
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+thead {
+  font-weight: ;
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-image {
+  width: 100%;
+}
+
+.td-head {
+  display: flex;
+}
+
+.table-container {
+  margin-top: 2rem;
+}
+
+.sort-icon {
+  width: 1.25rem;
+}
