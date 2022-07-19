@@ -43,10 +43,6 @@ code {
     monospace;
 }
 
-thead {
-  font-weight: ;
-}
-
 .title-wrapper {
   display: flex;
   align-items: center;
@@ -59,12 +55,18 @@ thead {
 
 .td-head {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .table-container {
   margin-top: 2rem;
 }
 
-.sort-icon {
-  width: 1.25rem;
+.svg-icon {
+  width: 1rem;
+}
+
+.text-id {
+  font-size: 0.75rem;
 }

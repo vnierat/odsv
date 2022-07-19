@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import { useGetJobs } from "../../api/fetchJobs";
 import SearchInput from "../searchInput/SearchInput";
-import JobsTable from "./JobsTable";
+import JobsListTable from "./JobsListTable";
 
 const JobsDashboard = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+
+  const jobsData = useGetJobs();
 
   const searchHandler = (searchTerm: any) => {
     setSearchTerm(searchTerm);
@@ -22,14 +24,13 @@ const JobsDashboard = () => {
       setSearchResults(jobsData);
     }
   };
-  const jobsData = useGetJobs();
 
-  console.log(searchResults);
+  const isSearchTerm = Boolean(searchTerm.length);
 
   return (
     <Container className="mt-5">
       <SearchInput term={searchTerm} searchKeyword={searchHandler} />
-      <JobsTable jobsData={searchTerm.length < 1 ? jobsData : searchResults} />
+      <JobsListTable jobsData={isSearchTerm ? searchResults : jobsData} />
     </Container>
   );
 };

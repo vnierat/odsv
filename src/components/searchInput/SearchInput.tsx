@@ -13,7 +13,6 @@ const SearchInput: FC<SearchInputProps> = ({ searchKeyword, term }) => {
     searchKeyword(inputEl.current.value);
   };
 
-  console.log(typeof term);
   return (
     <Form.Group className="mb-3">
       <Form.Control
